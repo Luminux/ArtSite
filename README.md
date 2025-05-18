@@ -1,7 +1,7 @@
 # Vector Space Weather Report Art Gallery
 
-This project is a small web gallery that displays artwork generated with ChatGPT. Clicking any image opens a panel with additional details including title, description, generation date, prompts, and a short weather report.
+This project hosts an art gallery of images created with ChatGPT. The gallery displays five cropped thumbnails per row. Clicking a thumbnail reveals the full image and metadata including generation prompts and a weather report.
 
-## Running the Gallery
+## Running the gallery
 
-Open `index.html` in a modern browser. Navigation links at the top of each page lead to the home Gallery, an About page, and a Project Prompts page.
+Open `index.html` in a modern web browser. No build tools are needed.

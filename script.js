@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(artworks => {
       const gallery = document.getElementById('gallery');
       artworks.forEach((art, index) => {
+        const container = document.createElement('div');
+        container.className = 'thumb';
         const img = document.createElement('img');
         img.src = art.image;
         img.alt = art.title;
         img.dataset.index = index;
-        gallery.appendChild(img);
+        container.appendChild(img);
+        gallery.appendChild(container);
       });
 
       gallery.addEventListener('click', (e) => {
-        if (e.target.tagName.toLowerCase() === 'img') {
-          const art = artworks[e.target.dataset.index];
+        const img = e.target.closest('.thumb img');
+        if (img) {
+          const art = artworks[img.dataset.index];
           showOverlay(art);
         }
       });
@@ -28,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function showOverlay(art) {
-  document.getElementById('overlay-image').src = art.image;
+  const imgEl = document.getElementById('overlay-image');
+  imgEl.src = art.image;
+  imgEl.alt = art.title;
   document.getElementById('overlay-title').textContent = art.title;
   document.getElementById('overlay-description').textContent = art.description;
   document.getElementById('overlay-date').textContent = art.generated_at;
