@@ -33,6 +33,7 @@ body {
 
 .nav a:hover {
   text-decoration: underline;
+
 }
 
 .gallery {
@@ -62,7 +63,9 @@ body {
 }
 
 .overlay-content {
+
   position: relative;
+
   background: #fff;
   padding: 1rem;
   max-width: 600px;
