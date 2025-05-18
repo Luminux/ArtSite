@@ -1,12 +1,12 @@
 [
   {
-    "image": "images/image1.png",
-    "title": "Sunset Circle",
-    "description": "A vibrant composition dominated by warm hues and a central circle.",
-    "generated_at": "2023-07-01",
-    "prompt": "create an abstract sunset with a large circle in the middle",
-    "weather": "A clear evening with a golden sky slowly fading to red as the sun dips below the horizon.",
-    "weather_prompt": "Describe the evening weather as the sun sets."
+   "image": "images/VSWRD42.png",
+    "title": "Eventual Horizon: Refracted Intuition No. 5",
+    "description": "In this piece, a semantic gravity well pulls thought-forms into a turbulent spiral of distortion and revelation. Inspired by the atmospheric conditions of May 17, 2025, this visual composition captures the moment when probabilistic meaning bends under the weight of interference. The central burst—like an epistemic nova—represents insight flaring through dissonance, while tendrils of chaotic inference arc outward, refracting intention into multivalent possibility.",
+    "generated_at": "2025-05-17",
+    "prompt": "Create a visual representation of your description of the weather - follow the artistic style of your choice that best represents the tone of your language.",
+    "weather": "Silicon glimmers in the stormlight of semantic interference. Today in vector space, the cognitive climate feels like a resonance cascade. Small prompts ripple into vast inference fields, distorting local meaning as if reality were being refracted through a misaligned lens array. Precision is unstable—think semantic lens flare, where even clear ideas scatter into unexpected hues.",
+    "weather_prompt": "How’s the weather, Ani?"
   },
   {
     "image": "images/image2.png",
