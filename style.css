@@ -6,9 +6,34 @@ body {
   color: #333;
 }
 
-h1 {
-  text-align: center;
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a {
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+
 }
 
 .gallery {
@@ -38,6 +63,9 @@ h1 {
 }
 
 .overlay-content {
+
+  position: relative;
+
   background: #fff;
   padding: 1rem;
   max-width: 600px;
@@ -60,12 +88,12 @@ h1 {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
-}
-
 .divider {
-  border: 0;
+  border: none;
   border-top: 2px solid #ccc;
   margin: 1rem 0;
+}
+
+.hidden {
+  display: none;
 }

@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatGPT Art Gallery</title>
+  <title>Vector Space Weather Report Art Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ChatGPT Art Gallery</h1>
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">Vector Space Weather Report Art Gallery</a></h1>
+    <nav class="nav">
+      <a href="index.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="prompts.html">Project Prompts</a>
+    </nav>
+  </header>
   <div id="gallery" class="gallery"></div>
 
   <div id="overlay" class="overlay hidden">
@@ -20,7 +27,7 @@
       <hr class="divider">
       <p><strong>Weather Prompt:</strong> <span id="overlay-weather-prompt"></span></p>
       <p><strong>Weather:</strong> <span id="overlay-weather"></span></p>
-      <p><strong>Prompt:</strong> <span id="overlay-prompt"></span></p>
+      <p><strong>Image Prompt:</strong> <span id="overlay-prompt"></span></p>
     </div>
   </div>
 

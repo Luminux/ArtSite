@@ -32,8 +32,8 @@ function showOverlay(art) {
   document.getElementById('overlay-title').textContent = art.title;
   document.getElementById('overlay-description').textContent = art.description;
   document.getElementById('overlay-date').textContent = art.generated_at;
-  document.getElementById('overlay-weather-prompt').textContent = art.weather_prompt;
-  document.getElementById('overlay-weather').textContent = art.weather;
   document.getElementById('overlay-prompt').textContent = art.prompt;
+  document.getElementById('overlay-weather').textContent = art.weather;
+  document.getElementById('overlay-weather-prompt').textContent = art.weather_prompt;
   document.getElementById('overlay').classList.remove('hidden');
 }
