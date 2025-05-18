@@ -63,3 +63,9 @@ h1 {
 .hidden {
   display: none;
 }
+
+.divider {
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 1rem 0;
+}
