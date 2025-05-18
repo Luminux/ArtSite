@@ -1,0 +1,29 @@
+[
+  {
+    "image": "images/image1.svg",
+    "title": "Sunset Circle",
+    "description": "A vibrant composition dominated by warm hues and a central circle.",
+    "generated_at": "2023-07-01",
+    "prompt": "create an abstract sunset with a large circle in the middle",
+    "weather": "A clear evening with a golden sky slowly fading to red as the sun dips below the horizon.",
+    "weather_prompt": "Describe the evening weather as the sun sets."
+  },
+  {
+    "image": "images/image2.svg",
+    "title": "Blue Geometry",
+    "description": "Sharp edges and cool tones forming a serene geometric space.",
+    "generated_at": "2023-07-02",
+    "prompt": "geometric shapes in shades of blue, minimalist style",
+    "weather": "A crisp, cool day with a gentle breeze carrying the scent of the sea.",
+    "weather_prompt": "Write a short description of calm seaside weather."
+  },
+  {
+    "image": "images/image3.svg",
+    "title": "Gradient Dream",
+    "description": "Soft gradients merge into a dreamlike purple landscape.",
+    "generated_at": "2023-07-03",
+    "prompt": "dreamy landscape in purples with smooth gradients",
+    "weather": "Warm and humid night with distant thunder rolling across the horizon.",
+    "weather_prompt": "Describe the sensation of a hot, stormy evening."
+  }
+]

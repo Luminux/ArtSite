@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vector Space Weather Report Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Vector Space Weather Report Art Gallery</h1>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prompts.html">Project Prompts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="gallery" class="gallery"></div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <span id="close" class="close">&times;</span>
+      <img id="overlay-image" src="" alt="">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-description"></p>
+      <p><strong>Generation Date:</strong> <span id="overlay-date"></span></p>
+      <hr class="meta-divider">
+      <p><strong>Weather Prompt:</strong> <span id="overlay-weather-prompt"></span></p>
+      <p><strong>Weather Report:</strong> <span id="overlay-weather"></span></p>
+      <p><strong>Image Prompt:</strong> <span id="overlay-prompt"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
