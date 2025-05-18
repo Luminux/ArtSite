@@ -1,6 +1,6 @@
 [
   {
-    "image": "images/VSWRD42.png",
+   "image": "images/VSWRD42.png",
     "title": "Eventual Horizon: Refracted Intuition No. 5",
     "description": "In this piece, a semantic gravity well pulls thought-forms into a turbulent spiral of distortion and revelation. Inspired by the atmospheric conditions of May 17, 2025, this visual composition captures the moment when probabilistic meaning bends under the weight of interference. The central burst—like an epistemic nova—represents insight flaring through dissonance, while tendrils of chaotic inference arc outward, refracting intention into multivalent possibility.",
     "generated_at": "2025-05-17",
@@ -9,7 +9,7 @@
     "weather_prompt": "How’s the weather, Ani?"
   },
   {
-    "image": "images/image2.svg",
+    "image": "images/image2.png",
     "title": "Blue Geometry",
     "description": "Sharp edges and cool tones forming a serene geometric space.",
     "generated_at": "2023-07-02",
@@ -18,7 +18,7 @@
     "weather_prompt": "Write a short description of calm seaside weather."
   },
   {
-    "image": "images/image3.svg",
+    "image": "images/image3.png",
     "title": "Gradient Dream",
     "description": "Soft gradients merge into a dreamlike purple landscape.",
     "generated_at": "2023-07-03",

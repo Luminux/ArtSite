@@ -6,55 +6,58 @@ body {
   color: #333;
 }
 
-/* Header and navigation */
-.site-header {
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #333;
   color: #fff;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
-.site-title {
-  margin: 0 0 0.5rem;
-  text-align: center;
-}
-
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.site-nav a {
+.navbar a {
   color: #fff;
   text-decoration: none;
 }
 
-.site-nav a:hover {
-  text-decoration: underline;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
+.site-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
-.thumb {
+.thumbnail {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1/1;
+  padding-bottom: 100%;
   overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
-.thumb img {
+.thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .overlay {
@@ -70,7 +73,6 @@ body {
 }
 
 .overlay-content {
-  position: relative;
   background: #fff;
   padding: 1rem;
   max-width: 600px;
@@ -82,6 +84,12 @@ body {
 .overlay img {
   width: 100%;
   height: auto;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.5rem 0;
 }
 
 .close {
@@ -97,12 +105,6 @@ body {
   display: none;
 }
 
-.meta-divider {
-  margin: 1em 0;
-  border: 0;
-  border-top: 1px solid #ccc;
-}
-
-.page-content {
+main.content {
   padding: 1rem;
 }
