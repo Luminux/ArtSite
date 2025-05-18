@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ChatGPT Art Gallery</h1>
+  <div id="gallery" class="gallery"></div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <span id="close" class="close">&times;</span>
+      <img id="overlay-image" src="" alt="">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-description"></p>
+      <p><strong>Generated:</strong> <span id="overlay-date"></span></p>
+      <p><strong>Prompt:</strong> <span id="overlay-prompt"></span></p>
+      <p><strong>Weather:</strong> <span id="overlay-weather"></span></p>
+      <p><strong>Weather Prompt:</strong> <span id="overlay-weather-prompt"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
