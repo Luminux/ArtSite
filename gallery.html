@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Vector Space Weather Report Gallery</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#333;background:#fafafa}
+nav.navbar{display:flex;justify-content:space-between;align-items:center;background:#222;color:#fff;padding:.5rem 1rem}
+nav.navbar a{color:#fff;text-decoration:none}
+ul.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+h1.site-title{font-size:1.4rem;margin:0}
+main{padding:1rem;max-width:1200px;margin:auto}
+#gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.thumbnail{position:relative;padding-bottom:100%;overflow:hidden;cursor:pointer}
+.thumbnail img{position:absolute;width:100%;height:100%;top:0;left:0;object-fit:cover}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center}
+.modal.active{display:flex}
+.card{background:#fff;perspective:1000px;width:90%;max-width:600px;max-height:90%;overflow:hidden}
+.card-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.card.flipped .card-inner{transform:rotateY(180deg)}
+.card-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;overflow:auto;padding:1rem;box-sizing:border-box}
+.card-face.back{transform:rotateY(180deg);background:#f0f0f0}
+.close-btn{position:absolute;top:10px;right:15px;font-size:2rem;color:#fff;cursor:pointer}
+@media(max-width:600px){#gallery-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+ <h1 class="site-title"><a href="index.html">Vector Space Weather Report Gallery</a></h1>
+ <ul class="nav-links">
+  <li><a href="about.html">About the Project</a></li>
+  <li><a href="statement.html">Artist’s Statement</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="#" title="Admin only">Dev Access</a></li>
+ </ul>
+</nav>
+<main>
+<section id="gallery-grid"></section>
+</main>
+<div id="modal" class="modal" role="dialog" aria-modal="true">
+ <div class="card" id="modal-card">
+  <div class="card-inner">
+   <div class="card-face front">
+     <img id="modal-img" src="" alt="" style="width:100%;height:auto">
+     <h2 id="modal-title"></h2>
+     <p id="modal-date"></p>
+     <p id="modal-desc"></p>
+   </div>
+   <div class="card-face back">
+     <h3>Weather Prompt</h3>
+     <p id="modal-weather-prompt"></p>
+     <h3>Weather Report</h3>
+     <p id="modal-weather"></p>
+     <h3>Image Prompt</h3>
+     <p id="modal-image-prompt"></p>
+   </div>
+  </div>
+ </div>
+ <span class="close-btn" id="close">&times;</span>
+</div>
+<script>
+const artworks=[
+  {title:"Eventual Horizon",image:"images/VSWRD42.png",description:"In this piece, a semantic gravity well pulls thought-forms into a turbulent spiral of distortion and revelation.",generated:"2025-05-17",weather:"Silicon glimmers in the stormlight of semantic interference.",weatherPrompt:"How’s the weather, Ani?",imagePrompt:"Create a visual representation of your description."},
+  {title:"Blue Geometry",image:"images/image2.png",description:"Sharp edges and cool tones forming a serene geometric space.",generated:"2023-07-02",weather:"A crisp, cool day with a gentle breeze carrying the scent of the sea.",weatherPrompt:"Write a short description of calm seaside weather.",imagePrompt:"geometric shapes in shades of blue, minimalist style"},
+  {title:"Gradient Dream",image:"images/image3.png",description:"Soft gradients merge into a dreamlike purple landscape.",generated:"2023-07-03",weather:"Warm and humid night with distant thunder rolling across the horizon.",weatherPrompt:"Describe the sensation of a hot, stormy evening.",imagePrompt:"dreamy landscape in purples with smooth gradients"}
+];
+const grid=document.getElementById('gallery-grid');
+artworks.forEach((art,i)=>{
+ const div=document.createElement('div');
+ div.className='thumbnail';
+ div.dataset.index=i;
+ const img=document.createElement('img');
+ img.src=art.image;
+ img.alt=art.title;
+ div.appendChild(img);
+ grid.appendChild(div);
+});
+const modal=document.getElementById('modal');
+const card=document.getElementById('modal-card');
+function openModal(art){
+ document.getElementById('modal-img').src=art.image;
+ document.getElementById('modal-title').textContent=art.title;
+ document.getElementById('modal-desc').textContent=art.description;
+ document.getElementById('modal-date').textContent='Generated: '+art.generated;
+ document.getElementById('modal-weather').textContent=art.weather;
+ document.getElementById('modal-weather-prompt').textContent=art.weatherPrompt;
+ document.getElementById('modal-image-prompt').textContent=art.imagePrompt;
+ modal.classList.add('active');
+ card.classList.remove('flipped');
+}
+function closeModal(){modal.classList.remove('active');}
+grid.addEventListener('click',e=>{
+ const thumb=e.target.closest('.thumbnail');
+ if(!thumb) return;
+ openModal(artworks[thumb.dataset.index]);
+});
+modal.addEventListener('click',e=>{
+ if(e.target.id==='close'){closeModal();}
+ else if(e.target===modal){closeModal();}
+});
+card.addEventListener('click',()=>{
+ card.classList.toggle('flipped');
+});
+</script>
+</body>
+</html>
